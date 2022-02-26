@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <div id="conteiner">
+      <h1>Words Counter</h1>
+      <p id="title">Words number: <span id="counter"></span></p>
+      <textarea
+        id="text"
+        rows="10"
+        cols="50"
+        onchange="document.app.wordView.setTextArea(event)"
+      ></textarea>
+      <button id="button" onclick="document.app.wordController.countWords()">
+        Count words
+      </button>
+
+      <button
+        id="button-reset"
+        onclick="document.app.wordController.resetWords()"
+      >
+        Reset
+      </button>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
