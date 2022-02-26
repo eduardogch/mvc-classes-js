@@ -1,28 +1,46 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
   </head>
   <body>
-    <div id="conteiner">
-      <h1>Words Counter</h1>
-      <p id="title">Words number: <span id="counter"></span></p>
-      <textarea
-        id="text"
-        rows="10"
-        cols="50"
-        onchange="document.app.wordView.setTextArea(event)"
-      ></textarea>
-      <button id="button" onclick="document.app.wordController.countWords()">
-        Count words
-      </button>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Words Counter</h1>
+        <p class="subtitle" id="title">
+          Words number: <strong id="counter"></strong>
+        </p>
+        <textarea
+          id="text"
+          rows="10"
+          cols="50"
+          onchange="document.app.wordView.setTextArea(event)"
+        ></textarea>
 
-      <button
-        id="button-reset"
-        onclick="document.app.wordController.resetWords()"
-      >
-        Reset
-      </button>
-    </div>
+        <div>
+          <button
+            id="button"
+            class="button is-primary"
+            onclick="document.app.wordController.countWords()"
+          >
+            Count words
+          </button>
+
+          <button
+            id="button-reset"
+            class="button is-warning"
+            onclick="document.app.wordController.resetWords()"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
